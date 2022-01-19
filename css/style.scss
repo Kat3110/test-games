@@ -1,0 +1,331 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+.background {
+    width: 1339px;
+    height: 700px;
+    margin: 0 auto;
+    position: relative;
+    background: transparent url(../img/sky.png) no-repeat center;
+}
+.location {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+.cloud {
+    position: absolute;
+    z-index: 2;
+
+    &__one {
+        top: 56px;
+        right: -50px;
+        animation: animCloud 100s infinite linear
+    }
+    &__two {
+        top: 110px;
+        right: 394px;
+        animation: animCloud 80s infinite linear
+    }
+    &__three {
+        top: 27px;
+        right: 845px;
+        animation: animCloud 70s infinite linear
+    }
+    &__four {
+        top: 152px;
+        right: 653px;
+        animation: animCloud 80s infinite linear
+    }
+    &__five {
+        top: 204px;
+        right: 198px;
+        animation: animCloud 90s infinite linear
+    }
+    &__six {
+        top: 228px;
+        right: 330px;
+        animation: animCloud 60s infinite linear
+    }
+    &__seven {
+        top: 216px;
+        right: 448px;
+        animation: animCloud 70s infinite linear
+    }
+    &__eight {
+        top: 194px;
+        right: 675px;
+        animation: animCloud 80s infinite linear
+    }
+}
+@keyframes animCloud {
+    from {
+        transform: translateX(400%)
+    }
+    to {
+        transform: translateX(-100%)
+    }
+}
+
+.squirrel {
+    position: absolute;
+    z-index: 3;
+    bottom: 336px;
+    left: 149px;
+
+    .tors {
+        position: absolute;
+
+        img:nth-child(1) {
+            position: absolute;
+            top:5px;
+            right: -36px;
+            z-index: 2;
+        }
+        img:nth-child(2) {
+            position: absolute;
+            z-index: 3;
+        }
+    }
+
+    .tail {
+        position: absolute;
+        top: -15px;
+        right:  -4px;
+
+        @keyframes tail-1 {
+            from    { opacity: 1; }
+            5%     { opacity: 1; }
+            15%     { opacity: 1; }
+            20%     { opacity: 0; }
+            90%     { opacity: 0; }
+            95%     { opacity: 1; }
+            100%     { opacity: 1; }
+        }
+ 
+        @keyframes tail-2 {
+            from    { opacity: 0; }
+            10%     { opacity: 0; }
+            15%     { opacity: 1; }
+            20%     { opacity: 1; }
+            25%     { opacity: 0; }
+            85%     { opacity: 0; }
+            90%     { opacity: 1; }
+            95%     { opacity: 1; }
+            97%     { opacity: 0; }
+        }
+
+        @keyframes tail-3 {
+            from    { opacity: 0; }
+            15%     { opacity: 0; }
+            20%     { opacity: 1; }
+            30%     { opacity: 1; }
+            35%     { opacity: 0; }
+            80%     { opacity: 0; }
+            85%     { opacity: 1; }
+            90%     { opacity: 1; }
+            95%     { opacity: 0; }
+        }
+ 
+        @keyframes tail-4 {
+            from    { opacity: 0; }
+            25%     { opacity: 0; }
+            30%     { opacity: 1; }
+            40%     { opacity: 1; }
+            45%     { opacity: 0; }
+            75%     { opacity: 0; }
+            80%     { opacity: 1; }
+            85%     { opacity: 1; }
+            90%     { opacity: 0; }
+        }
+
+        @keyframes tail-5 {
+            from    { opacity: 0; }
+            35%     { opacity: 0; }
+            40%     { opacity: 1; }
+            50%     { opacity: 1; }
+            55%     { opacity: 0; }
+            70%     { opacity: 0; }
+            75%     { opacity: 1; }
+            80%     { opacity: 1; }
+            85%     { opacity: 0; }
+        }
+ 
+        @keyframes tail-6 {
+            from    { opacity: 0; }
+            45%     { opacity: 0; }
+            50%     { opacity: 1; }
+            60%     { opacity: 1; }
+            65%     { opacity: 0; }
+            70%     { opacity: 1; }
+            75%     { opacity: 1; }
+            80%     { opacity: 0; }
+        }
+        
+        @keyframes tail-7 {
+            from    { opacity: 0; }
+            55%     { opacity: 0; }
+            60%     { opacity: 1; }
+            70%     { opacity: 1; }
+            75%     { opacity: 0; }
+        }
+
+        .relative {
+            position: relative;
+        }
+        .tail__img {
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        .tail__img.next {
+            position: absolute;
+            right: 1px;
+            opacity: 0;
+        }
+        .tail__img.im-1 { 
+            animation-name: tail-1;
+        }
+        .tail__img.next.im-2 {
+            top: -1px;
+            right: 1px;
+            animation-name: tail-2;
+        }
+        .tail__img.next.im-3 {
+            top: -3px;
+            right: 2px;
+            animation-name: tail-3;
+        }
+        .tail__img.next.im-4 { 
+            top: -5px;
+            right: 1px;
+            animation-name: tail-4;
+        }
+        .tail__img.next.im-5 { 
+            top: -7px;
+            right: 2px;
+            animation-name: tail-5;
+        }
+        .tail__img.next.im-6 { 
+            top: -9px;
+            right: 0px;
+            animation-name: tail-6;
+        }
+        .tail__img.next.im-7 { 
+            top: -10px;
+            right: -2px;        
+            animation-name: tail-7;
+        }
+    }
+
+    .shadow {
+        position: absolute;
+        top: 27px;
+        right: -40px;
+    }
+
+    .paws {
+        position: absolute;
+        z-index: 4;
+        right: -43px;
+    }
+
+    .snout {
+        position: absolute;
+        z-index: 5;
+        right: -38px;
+        top: -15px;
+    }
+
+    .eyes {
+        position: absolute;
+        z-index: 6;
+        right: -30px;
+        top: -17px;
+    }
+
+    .ear__one {
+        position: absolute;
+        z-index: 5;
+        right: -31px;
+        top: -23px;
+    }
+
+    .ear__two {
+        position: absolute;
+        z-index: 5;
+        right: -26px;
+        top: -23px;
+    }
+}
+
+.bumblebee {
+    position: absolute;
+    z-index: 3;
+    bottom: 276px;
+    right: 534px;
+    animation-name: bumblebee;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+    
+}
+
+@keyframes bumblebee {
+    0%   { right: 520px; bottom: 276px;}
+    25%  { right: 534px; bottom: 276px;}
+    50%  { right: 534px; bottom: 306px;}
+    75%  { right: 520px; bottom: 306px;}
+    100% { right: 534px; bottom: 276px;}
+}
+
+.flag {
+    position: absolute;
+    z-index: 3;
+    top: 114px;
+    left: 430px;
+}
+
+.boat {
+    position: absolute;
+    z-index: 3;
+    bottom: 321px;
+    right: 398px;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-name: boat;
+    animation-timing-function: linear;
+}
+@keyframes boat {
+    20% {
+        transform: translatex(-1px) translatey(-1px)
+    }
+    40% {
+        transform: translatex(1px) translatey(1px);
+    }
+    60% {
+        transform: translatex(-1px) translatey(-1px)
+    }
+    80% {
+        transform: translatex(1px) translatey(1px)
+    }
+    100% {
+        transform: translatex(0px) translatey(0px)
+    }
+}
+
+.player {
+    position: absolute;
+    z-index: 3;
+    bottom: 142px;
+    right: 86px;
+}
+
+.bush {
+    position: absolute;
+    z-index: 4;
+    bottom: 141px;
+    left: 190px;
+}
+
