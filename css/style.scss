@@ -32,7 +32,7 @@ body {
     &__three {
         top: 27px;
         right: 845px;
-        animation: animCloud 70s infinite linear
+        animation: animCloud 60s infinite linear
     }
     &__four {
         top: 152px;
@@ -61,10 +61,10 @@ body {
     }
     @keyframes animCloud {
         from {
-            transform: translateX(400%)
+            transform: translateX(500px)
         }
         to {
-            transform: translateX(-100%)
+            transform: translateX(-200px)
         }
     }
 }
@@ -87,136 +87,28 @@ body {
         top: -33px;
         right: 4px;;
 
-        // @keyframes tail-1 {
-        //     from    { opacity: 1; }
-        //     5%      { opacity: 1; }
-        //     15%     { opacity: 1; }
-        //     20%     { opacity: 0; }
-        //     90%     { opacity: 0; }
-        //     95%     { opacity: 1; }
-        //     100%    { opacity: 1; }
-        // }
- 
-        // @keyframes tail-2 {
-        //     from    { opacity: 0; }
-        //     10%     { opacity: 0; }
-        //     15%     { opacity: 1; }
-        //     20%     { opacity: 1; }
-        //     25%     { opacity: 0; }
-        //     85%     { opacity: 0; }
-        //     90%     { opacity: 1; }
-        //     95%     { opacity: 1; }
-        //     97%     { opacity: 0; }
-        // }
-
-        // @keyframes tail-3 {
-        //     from    { opacity: 0; }
-        //     15%     { opacity: 0; }
-        //     20%     { opacity: 1; }
-        //     30%     { opacity: 1; }
-        //     35%     { opacity: 0; }
-        //     80%     { opacity: 0; }
-        //     85%     { opacity: 1; }
-        //     90%     { opacity: 1; }
-        //     95%     { opacity: 0; }
-        // }
- 
-        // @keyframes tail-4 {
-        //     from    { opacity: 0; }
-        //     25%     { opacity: 0; }
-        //     30%     { opacity: 1; }
-        //     40%     { opacity: 1; }
-        //     45%     { opacity: 0; }
-        //     75%     { opacity: 0; }
-        //     80%     { opacity: 1; }
-        //     85%     { opacity: 1; }
-        //     90%     { opacity: 0; }
-        // }
-
-        // @keyframes tail-5 {
-        //     from    { opacity: 0; }
-        //     35%     { opacity: 0; }
-        //     40%     { opacity: 1; }
-        //     50%     { opacity: 1; }
-        //     55%     { opacity: 0; }
-        //     70%     { opacity: 0; }
-        //     75%     { opacity: 1; }
-        //     80%     { opacity: 1; }
-        //     85%     { opacity: 0; }
-        // }
- 
-        // @keyframes tail-6 {
-        //     from    { opacity: 0; }
-        //     45%     { opacity: 0; }
-        //     50%     { opacity: 1; }
-        //     60%     { opacity: 1; }
-        //     65%     { opacity: 0; }
-        //     70%     { opacity: 1; }
-        //     75%     { opacity: 1; }
-        //     80%     { opacity: 0; }
-        // }
-        
-        // @keyframes tail-7 {
-        //     from    { opacity: 0; }
-        //     55%     { opacity: 0; }
-        //     60%     { opacity: 1; }
-        //     70%     { opacity: 1; }
-        //     75%     { opacity: 0; }
-        // }
+        .tail__img.im-1 { 
+             animation-name: tail-rotate;
+        }
 
         @keyframes tail-rotate {
             0% {
                 transform: rotate(0deg);
             }
             50% {
-                transform: rotate(10deg);
+                transform: rotate(20deg);
             }
             100% {
                 transform: rotate(0deg);
             }
         }
         .tail__img {
-            animation-duration: 5s;
+            animation-duration: 4s;
             animation-iteration-count: infinite;
-            animation-timing-function: linear;
+            animation-timing-function: ease-out;
+            transform-origin: 90% 90% 0;
         }
-        // .tail__img.next {
-        //     position: absolute;
-        //     opacity: 0;
-        // }
-        .tail__img.im-1 { 
-            animation-name: tail-rotate;
-        }
-        // .tail__img.next.im-2 {
-        //     top: -1px;
-        //     right: 1px;
-        //     animation-name: tail-2;
-        // }
-        // .tail__img.next.im-3 {
-        //     top: -3px;
-        //     right: 2px;
-        //     animation-name: tail-3; 
-        // }
-        // .tail__img.next.im-4 { 
-        //     top: -5px;
-        //     right: 1px;
-        //     animation-name: tail-4;
-        // }
-        // .tail__img.next.im-5 { 
-        //     top: -6px;
-        //     right: 1px;
-        //     animation-name: tail-5;
-        // }
-        // .tail__img.next.im-6 { 
-        //     top: -7px;
-        //     right: -1px;
-        //     animation-name: tail-6;
-        // }
-        // .tail__img.next.im-7 {   
-        //     top: -11px;
-        //     right: -3px;   
-        //     animation-name: tail-7;
-        // }
+        
     }
 
     .shadow {
@@ -231,58 +123,32 @@ body {
         right: -37px;
         bottom: -8px;
 
-
-        .paws__img {
-            animation-duration: 4s;
-            animation-iteration-count: infinite;
-        }
+        .paws__img.im-1 { 
+            animation-name: tail-rotate;
+       }
+       
+       @keyframes paws-rotate {
+           0% {
+               transform: rotate(0deg);
+           }
+           50% {
+               transform: rotate(-10deg);
+           }
+           100% {
+               transform: rotate(0deg);
+           }
+       }
+       .paws__img {
+           animation-duration: 4s;
+           animation-iteration-count: infinite;
+           animation-timing-function: ease-out;
+           transform-origin: 30% 30% 0;
+       }
         .paws__img.next {
             position: absolute;
             opacity: 0;
         }
-        .paws__img.paws__im-1 { 
-            animation-name: paws-1;
-        }
-        .paws__img.next.paws__im-2 {
-            top: 1px;
-            left: 1px;
-            animation-name: paws-2;
-        }
-        .paws__img.next.paws__im-3 {
-            top: 1px;
-            left: 1px;
-            animation-name: paws-3;
-        }
-        @keyframes paws-1 {
-            from     { opacity: 1; }
-            20%      { opacity: 1; }
-            21%      { opacity: 0; }
-            79%      { opacity: 0; }
-            80%      { opacity: 1; }
-            100%     { opacity: 1; }
-        }
-     
-        @keyframes paws-2 {
-            from     { opacity: 0; }
-            19%      { opacity: 0; }
-            20%      { opacity: 1; }
-            40%      { opacity: 1; }
-            41%      { opacity: 0; }
-            59%      { opacity: 0; }
-            60%      { opacity: 1; }
-            80%      { opacity: 1; }
-            81%      { opacity: 0; }
-            100%     { opacity: 0; }
-        }
-    
-        @keyframes paws-3 {
-            from     { opacity: 0; }
-            39%      { opacity: 0; }
-            40%      { opacity: 1; }
-            60%      { opacity: 1; }
-            61%      { opacity: 0; }
-            100%     { opacity: 0; }
-        }
+       
     }
 
     .head {
@@ -548,16 +414,16 @@ body {
     }
     @keyframes bumblebee {
         20% {
-            transform: translatey(-1px)
+            transform: translatey(-2px)
         }
         40% {
-            transform: translatey(1px);
+            transform: translatey(-1px);
         }
         60% {
-            transform: translatey(2px)
+            transform: translatey(3px)
         }
         80% {
-            transform: translatey(1px)
+            transform: translatey(-1px)
         }
         100% {
             transform: translatey(0px)
@@ -718,8 +584,38 @@ body {
 .player {
     position: absolute;
     z-index: 3;
-    bottom: 142px;
-    right: 86px;
+    bottom: 137px;
+    left: 12px;
+
+    &__one {
+        position: absolute;
+        bottom: 136px;
+        left: 629px;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-name: player__one;
+        animation-timing-function: linear;
+        max-width: 53px;
+        max-height: 82px;
+    }
+
+    @keyframes player__one {
+        20% {
+            transform: translatey(-1px)
+        }
+        40% {
+            transform: translatey(1px);
+        }
+        60% {
+            transform: translatey(3px)
+        }
+        80% {
+            transform: translatey(1px)
+        }
+        100% {
+            transform: translatey(0px)
+        }
+    }
 }
 
 .bush {
