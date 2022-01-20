@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .background {
@@ -26,78 +26,144 @@ body {
 .cloud__one {
   top: 56px;
   right: -50px;
-  -webkit-animation: animCloud 100s infinite linear;
-          animation: animCloud 100s infinite linear;
+  -webkit-animation: animCloud 50s linear, 50s animTwoCloud 10s infinite linear;
+          animation: animCloud 50s linear, 50s animTwoCloud 10s infinite linear;
 }
 
 .cloud__two {
   top: 110px;
   right: 394px;
-  -webkit-animation: animCloud 80s infinite linear;
-          animation: animCloud 80s infinite linear;
+  -webkit-animation: animCloud 65s linear, 65s animTwoCloud 30s infinite linear;
+          animation: animCloud 65s linear, 65s animTwoCloud 30s infinite linear;
 }
 
 .cloud__three {
   top: 27px;
   right: 845px;
-  -webkit-animation: animCloud 60s infinite linear;
-          animation: animCloud 60s infinite linear;
+  -webkit-animation: animCloudTwo 44s linear, 44s animTwoCloudTwo 22s infinite linear;
+          animation: animCloudTwo 44s linear, 44s animTwoCloudTwo 22s infinite linear;
 }
 
 .cloud__four {
   top: 152px;
   right: 653px;
-  -webkit-animation: animCloud 80s infinite linear;
-          animation: animCloud 80s infinite linear;
+  -webkit-animation: animCloud 120s linear, 120s animTwoCloud 55s infinite linear;
+          animation: animCloud 120s linear, 120s animTwoCloud 55s infinite linear;
 }
 
 .cloud__five {
   top: 204px;
   right: 198px;
-  -webkit-animation: animCloud 90s infinite linear;
-          animation: animCloud 90s infinite linear;
+  -webkit-animation: animCloud 110s linear, 110s animTwoCloud 15s infinite linear;
+          animation: animCloud 110s linear, 110s animTwoCloud 15s infinite linear;
 }
 
 .cloud__six {
   top: 228px;
   right: 330px;
-  -webkit-animation: animCloud 60s infinite linear;
-          animation: animCloud 60s infinite linear;
+  -webkit-animation: animCloud 100s linear, 100s animTwoCloud 14s infinite linear;
+          animation: animCloud 100s linear, 100s animTwoCloud 14s infinite linear;
 }
 
 .cloud__seven {
   top: 216px;
   right: 448px;
-  -webkit-animation: animCloud 70s infinite linear;
-          animation: animCloud 70s infinite linear;
+  -webkit-animation: animCloud 130s linear, 130s animTwoCloud 25s infinite linear;
+          animation: animCloud 130s linear, 130s animTwoCloud 25s infinite linear;
 }
 
 .cloud__eight {
   top: 194px;
   right: 675px;
-  -webkit-animation: animCloud 80s infinite linear;
-          animation: animCloud 80s infinite linear;
+  -webkit-animation: animCloud 201s linear, 201s animTwoCloud 70s infinite linear;
+          animation: animCloud 201s linear, 201s animTwoCloud 70s infinite linear;
 }
 
 @-webkit-keyframes animCloud {
   from {
-    -webkit-transform: translateX(500px);
-            transform: translateX(500px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
   to {
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px);
   }
 }
 
 @keyframes animCloud {
   from {
-    -webkit-transform: translateX(500px);
-            transform: translateX(500px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
   to {
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px);
+  }
+}
+
+@-webkit-keyframes animTwoCloud {
+  from {
+    -webkit-transform: translateX(-1100px);
+            transform: translateX(-1100px);
+  }
+  to {
+    -webkit-transform: translateX(900px);
+            transform: translateX(900px);
+  }
+}
+
+@keyframes animTwoCloud {
+  from {
+    -webkit-transform: translateX(-1100px);
+            transform: translateX(-1100px);
+  }
+  to {
+    -webkit-transform: translateX(900px);
+            transform: translateX(900px);
+  }
+}
+
+@-webkit-keyframes animCloudTwo {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(2300px);
+            transform: translateX(2300px);
+  }
+}
+
+@keyframes animCloudTwo {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(2300px);
+            transform: translateX(2300px);
+  }
+}
+
+@-webkit-keyframes animTwoCloudTwo {
+  from {
+    -webkit-transform: translateX(-1100px);
+            transform: translateX(-1100px);
+  }
+  to {
+    -webkit-transform: translateX(1200px);
+            transform: translateX(1200px);
+  }
+}
+
+@keyframes animTwoCloudTwo {
+  from {
+    -webkit-transform: translateX(-1100px);
+            transform: translateX(-1100px);
+  }
+  to {
+    -webkit-transform: translateX(1200px);
+            transform: translateX(1200px);
   }
 }
 
@@ -181,8 +247,8 @@ body {
 }
 
 .squirrel .paws .paws__img.im-1 {
-  -webkit-animation-name: tail-rotate;
-          animation-name: tail-rotate;
+  -webkit-animation-name: paws-rotate;
+          animation-name: paws-rotate;
 }
 
 @-webkit-keyframes paws-rotate {
@@ -191,8 +257,8 @@ body {
             transform: rotate(0deg);
   }
   50% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
@@ -206,8 +272,8 @@ body {
             transform: rotate(0deg);
   }
   50% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
@@ -220,8 +286,8 @@ body {
           animation-duration: 4s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   -webkit-transform-origin: 30% 30% 0;
           transform-origin: 30% 30% 0;
 }
@@ -1666,20 +1732,20 @@ body {
 
 @-webkit-keyframes player__one {
   20% {
-    -webkit-transform: translatey(-1px);
-            transform: translatey(-1px);
-  }
-  40% {
     -webkit-transform: translatey(1px);
             transform: translatey(1px);
   }
-  60% {
+  40% {
     -webkit-transform: translatey(3px);
             transform: translatey(3px);
   }
+  60% {
+    -webkit-transform: translatey(6px);
+            transform: translatey(6px);
+  }
   80% {
-    -webkit-transform: translatey(1px);
-            transform: translatey(1px);
+    -webkit-transform: translatey(3px);
+            transform: translatey(3px);
   }
   100% {
     -webkit-transform: translatey(0px);
@@ -1689,20 +1755,20 @@ body {
 
 @keyframes player__one {
   20% {
-    -webkit-transform: translatey(-1px);
-            transform: translatey(-1px);
-  }
-  40% {
     -webkit-transform: translatey(1px);
             transform: translatey(1px);
   }
-  60% {
+  40% {
     -webkit-transform: translatey(3px);
             transform: translatey(3px);
   }
+  60% {
+    -webkit-transform: translatey(6px);
+            transform: translatey(6px);
+  }
   80% {
-    -webkit-transform: translatey(1px);
-            transform: translatey(1px);
+    -webkit-transform: translatey(3px);
+            transform: translatey(3px);
   }
   100% {
     -webkit-transform: translatey(0px);

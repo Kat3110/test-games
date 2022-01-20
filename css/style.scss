@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    overflow: scroll;
+    overflow: hidden;
 }
 .background {
     width: 1339px;
@@ -18,53 +18,78 @@ body {
 .cloud {
     position: absolute;
     z-index: 2;
-
+    
     &__one {
         top: 56px;
         right: -50px;
-        animation: animCloud 100s infinite linear
+        animation: animCloud 50s linear, 50s animTwoCloud 10s infinite linear;
     }
     &__two {
         top: 110px;
         right: 394px;
-        animation: animCloud 80s infinite linear
+        animation: animCloud 65s linear, 65s animTwoCloud 30s infinite linear;
     }
     &__three {
         top: 27px;
         right: 845px;
-        animation: animCloud 60s infinite linear
+        animation: animCloudTwo 44s linear, 44s animTwoCloudTwo 22s infinite linear;
     }
     &__four {
         top: 152px;
         right: 653px;
-        animation: animCloud 80s infinite linear
+        animation: animCloud 120s linear, 120s animTwoCloud 55s infinite linear;
     }
     &__five {
         top: 204px;
         right: 198px;
-        animation: animCloud 90s infinite linear
+        animation: animCloud 110s linear, 110s animTwoCloud 15s infinite linear;
     }
     &__six {
         top: 228px;
         right: 330px;
-        animation: animCloud 60s infinite linear
+        animation: animCloud 100s linear, 100s animTwoCloud 14s infinite linear;
     }
     &__seven {
         top: 216px;
         right: 448px;
-        animation: animCloud 70s infinite linear
+        animation: animCloud 130s linear, 130s animTwoCloud 25s infinite linear;
     }
     &__eight {
         top: 194px;
         right: 675px;
-        animation: animCloud 80s infinite linear
+        animation: animCloud 201s linear, 201s animTwoCloud 70s infinite linear;
     }
     @keyframes animCloud {
         from {
-            transform: translateX(500px)
+            transform: translateX(0px);
         }
         to {
-            transform: translateX(-200px)
+            transform: translateX(2000px);
+        }
+    }
+    @keyframes animTwoCloud {
+        from {
+            transform: translateX(-1100px);
+        }
+        to {
+            transform: translateX(900px);
+        }
+    }
+
+    @keyframes animCloudTwo {
+        from {
+            transform: translateX(0px);
+        }
+        to {
+            transform: translateX(2300px);
+        }
+    }
+    @keyframes animTwoCloudTwo {
+        from {
+            transform: translateX(-1100px);
+        }
+        to {
+            transform: translateX(1200px);
         }
     }
 }
@@ -124,7 +149,7 @@ body {
         bottom: -8px;
 
         .paws__img.im-1 { 
-            animation-name: tail-rotate;
+            animation-name: paws-rotate;
        }
        
        @keyframes paws-rotate {
@@ -132,7 +157,7 @@ body {
                transform: rotate(0deg);
            }
            50% {
-               transform: rotate(-10deg);
+               transform: rotate(-15deg);
            }
            100% {
                transform: rotate(0deg);
@@ -141,7 +166,7 @@ body {
        .paws__img {
            animation-duration: 4s;
            animation-iteration-count: infinite;
-           animation-timing-function: ease-out;
+           animation-timing-function: linear;
            transform-origin: 30% 30% 0;
        }
         .paws__img.next {
@@ -168,7 +193,6 @@ body {
             96%      { opacity: 1; }
             100%     { opacity: 1; }
         }
-     
         @keyframes head-2 {
             from     { opacity: 0; }
             6%       { opacity: 0; }
@@ -182,7 +206,6 @@ body {
             97%      { opacity: 0; }
             100%     { opacity: 0; }
         }
-    
         @keyframes head-3 {
             from     { opacity: 0; }
             12%      { opacity: 0; }
@@ -601,16 +624,16 @@ body {
 
     @keyframes player__one {
         20% {
-            transform: translatey(-1px)
+            transform: translatey(1px)
         }
         40% {
-            transform: translatey(1px);
+            transform: translatey(3px);
         }
         60% {
-            transform: translatey(3px)
+            transform: translatey(6px)
         }
         80% {
-            transform: translatey(1px)
+            transform: translatey(3px)
         }
         100% {
             transform: translatey(0px)
